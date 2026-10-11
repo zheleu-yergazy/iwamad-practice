@@ -13,17 +13,19 @@ function Header({ name, title }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="header-brand">
-        <img src={logo} alt="" className="site-logo" />
+        <img className="header-logo" src={logo} alt="" />
         <div>
           <h1>{name}</h1>
           <p>{title}</p>
         </div>
       </div>
+
       <nav aria-label="Main navigation">
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/skills">Skills</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>
+
       <p className="likes-count">Likes: {likes}</p>
     </header>
   );
