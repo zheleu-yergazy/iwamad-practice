@@ -1,4 +1,5 @@
-﻿import Card from "./ui/Card";
+﻿
+import Card from "./ui/Card";
 import Tag from "./ui/Tag";
 import Button from "./ui/Button";
 
@@ -23,6 +24,7 @@ function PostCard({ title, date, tags, image }: PostCardProps) {
       )}
 
       <h2 className="post-title">{title}</h2>
+
       <p className="post-date">{date}</p>
 
       <div className="post-tags">
@@ -32,7 +34,7 @@ function PostCard({ title, date, tags, image }: PostCardProps) {
       </div>
 
       <Button
-        variant="secondary"
+        variant="primary"
         onClick={() => window.alert(title)}
         type="button"
       >

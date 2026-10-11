@@ -1,17 +1,45 @@
-﻿import SkillBadge from "../components/SkillBadge";
+﻿import Card from "../components/ui/Card";
+import SkillBadge from "../components/SkillBadge";
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "TypeScript"];
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Libraries & Frameworks",
+    skills: ["React"],
+  },
+  {
+    title: "Languages & Tools",
+    skills: ["TypeScript", "Git", "GitHub"],
+  },
+];
 
 function Skills() {
   return (
-    <section className="skills">
-      <h2>Skills</h2>
-      <ul>
-        {skills.map((skill) => (
-          <li key={skill}><SkillBadge skill={skill} /></li>
-        ))}
-      </ul>
-    </section>
+    <main className="page-container">
+      <section className="skills-page">
+        <h1>My Skills</h1>
+        <p className="page-description">
+          Technologies and tools I use to build web applications.
+        </p>
+
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <Card key={group.title} className="skill-card">
+              <h2>{group.title}</h2>
+
+              <div className="skill-badges">
+                {group.skills.map((skill) => (
+                  <SkillBadge key={skill} skill={skill} />
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 
