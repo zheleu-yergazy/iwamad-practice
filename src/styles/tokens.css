@@ -1,0 +1,12 @@
+﻿:root {
+  --color-primary: #005BB5;
+  --color-text: #1D1D1F;
+  --color-text-muted: #626267;
+  --color-background: #F5F5F7;
+  --color-surface: #FFFFFF;
+  --color-border: #D1D1D6;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --radius-card: 20px;
+  --radius-button: 999px;
+}
