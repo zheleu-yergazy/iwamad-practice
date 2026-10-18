@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="skills" element={<Skills />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="register" element={<RegisterPage />} />
       </Route>
     </Routes>
   );

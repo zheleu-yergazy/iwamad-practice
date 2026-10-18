@@ -1,4 +1,5 @@
-﻿@import "./styles/tokens.css";
+﻿
+@import "./styles/tokens.css";
 
 * {
   box-sizing: border-box;
@@ -293,7 +294,76 @@ main {
   opacity: 0.8;
 }
 
-/* Tablet */
+.register-page {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.register-page h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.register-page > p {
+  margin: 0 0 24px;
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: grid;
+  gap: var(--spacing-medium);
+  width: 100%;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 500;
+}
+
+.field input:not([type="checkbox"]) {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.field input[aria-invalid="true"] {
+  border: 2px solid #b91c1c;
+}
+
+.field-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 400 !important;
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.form > .ui-button {
+  width: 100%;
+}
+
 @media (min-width: 601px) {
   .posts-grid,
   .skills-grid {
@@ -305,7 +375,6 @@ main {
   }
 }
 
-/* Desktop header */
 @media (min-width: 700px) {
   .site-header {
     flex-direction: row;
@@ -353,5 +422,13 @@ main {
 
   .page-description {
     margin-bottom: 20px;
+  }
+
+  .register-page {
+    padding: 24px 16px 36px;
+  }
+
+  .register-page h2 {
+    font-size: 26px;
   }
 }
