@@ -1,0 +1,256 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #7c3aed;
+  --accent-bg: rgba(124, 58, 237, 0.1);
+  --accent-border: rgba(124, 58, 237, 0.4);
+  --social-bg: #f8f7fa;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/1.5 var(--sans);
+  letter-spacing: 0;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 22px max(24px, calc((100% - 1100px) / 2));
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.header-brand h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header-brand p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-header nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active,
+.site-header nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.site-header .likes-count {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Main content */
+main {
+  width: 100%;
+}
+
+.blog-home {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 36px 24px 48px;
+}
+
+.blog-home > h1 {
+  margin: 0 0 28px;
+  color: var(--text-h);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e5e7eb;
+}
+
+.post-card .post-title {
+  margin: 4px 0 0;
+  color: var(--text-h);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.post-date {
+  margin: 0;
+  color: #81798b;
+  font-size: 13px;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.post-card .ui-tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.post-card .ui-button {
+  align-self: flex-start;
+  min-height: 36px;
+  margin-top: auto;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .site-header {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .site-header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .blog-home {
+    padding: 24px 16px 36px;
+  }
+
+  .blog-home > h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .post-card {
+    padding: 12px;
+  }
+}
