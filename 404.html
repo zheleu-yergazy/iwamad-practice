@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <script>
-      sessionStorage.redirect = location.href;
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace("/iwamad-practice/");
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
+  <body></body>
 </html>
