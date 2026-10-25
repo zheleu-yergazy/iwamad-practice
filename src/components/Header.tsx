@@ -1,4 +1,5 @@
-﻿import { NavLink } from "react-router";
+﻿
+import { NavLink } from "react-router";
 import { useLikes } from "../context/LikesContext";
 import logo from "../assets/logo.svg";
 
@@ -23,6 +24,7 @@ function Header({ name, title }: HeaderProps) {
       <nav aria-label="Main navigation">
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/skills">Skills</NavLink>
+        <NavLink to="/events">Events</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/register">Register</NavLink>
       </nav>

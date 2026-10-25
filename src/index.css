@@ -30,6 +30,8 @@ main {
   width: 100%;
 }
 
+/* Header */
+
 .site-header {
   display: flex;
   flex-direction: column;
@@ -90,6 +92,38 @@ main {
   font-size: 14px;
 }
 
+/* Shared layout */
+
+.page-container,
+.blog-home,
+.events-page,
+.event-details {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.page-container > h1,
+.blog-home > h1,
+.events-page > h1,
+.event-details > h1,
+.skills-page > h1,
+.contact-page > h1 {
+  margin: 0 0 24px;
+  color: var(--color-text);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.page-description {
+  margin: 0 0 28px;
+  color: var(--color-text-muted);
+}
+
+/* Cards */
+
 .ui-card {
   min-width: 0;
   padding: var(--spacing-medium);
@@ -99,18 +133,10 @@ main {
   color: var(--color-text);
 }
 
-.blog-home {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 24px 48px;
-}
+/* Blog */
 
 .blog-home > h1 {
-  margin: 0 0 28px;
-  color: var(--color-text);
-  font-size: 32px;
-  font-weight: 700;
+  margin-bottom: 28px;
 }
 
 .posts-grid {
@@ -165,6 +191,8 @@ main {
   margin: 0;
 }
 
+/* Tags and buttons */
+
 .ui-tag {
   display: inline-flex;
   align-items: center;
@@ -212,25 +240,7 @@ main {
   font-size: 13px;
 }
 
-.page-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 24px 48px;
-}
-
-.skills-page > h1,
-.contact-page > h1 {
-  margin: 0 0 8px;
-  color: var(--color-text);
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.page-description {
-  margin: 0 0 28px;
-  color: var(--color-text-muted);
-}
+/* Skills */
 
 .skills-grid {
   display: grid;
@@ -259,6 +269,8 @@ main {
   flex-wrap: wrap;
   gap: var(--spacing-small);
 }
+
+/* Contact */
 
 .contact-card {
   display: flex;
@@ -293,6 +305,8 @@ main {
 .contact-item a:hover {
   opacity: 0.8;
 }
+
+/* Registration page */
 
 .register-page {
   width: 100%;
@@ -337,12 +351,12 @@ main {
 }
 
 .field input[aria-invalid="true"] {
-  border: 2px solid #b91c1c;
+  border: 2px solid var(--color-error);
 }
 
 .field-error {
   margin: 0;
-  color: #b91c1c;
+  color: var(--color-error);
   font-size: 0.875rem;
 }
 
@@ -363,6 +377,132 @@ main {
 .form > .ui-button {
   width: 100%;
 }
+
+/* Events list */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.card-grid > * {
+  min-width: 0;
+}
+
+.card-grid .ui-card {
+  height: 100%;
+}
+
+/* Event card content */
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  height: 100%;
+}
+
+.event-card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.event-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.event-card .ui-button,
+.event-card a {
+  margin-top: auto;
+}
+
+/* Event details and signup */
+
+.event-details {
+  max-width: 1100px;
+}
+
+.event-details > h1 {
+  margin-bottom: 24px;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.event-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.signup-section {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 32px;
+}
+
+.signup-section h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.signup-seats {
+  margin: 0 0 24px;
+  color: var(--color-text-muted);
+}
+
+.signup-form {
+  display: grid;
+  gap: var(--spacing-medium);
+  width: 100%;
+}
+
+.signup-form .field {
+  width: 100%;
+}
+
+.signup-form .field input:not([type="checkbox"]) {
+  width: 100%;
+}
+
+.signup-form > .ui-button {
+  justify-self: start;
+  min-width: 120px;
+  margin-top: 4px;
+}
+
+.signup-status {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--color-primary);
+  text-underline-offset: 3px;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive layout */
 
 @media (min-width: 601px) {
   .posts-grid,
@@ -400,19 +540,32 @@ main {
   }
 }
 
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
 @media (max-width: 600px) {
   .blog-home,
-  .page-container {
+  .page-container,
+  .events-page,
+  .event-details {
     padding: 24px 16px 36px;
   }
 
   .blog-home > h1,
+  .page-container > h1,
+  .events-page > h1,
+  .event-details > h1,
   .skills-page > h1,
   .contact-page > h1 {
     font-size: 26px;
   }
 
-  .blog-home > h1 {
+  .blog-home > h1,
+  .events-page > h1 {
     margin-bottom: 20px;
   }
 
@@ -431,4 +584,46 @@ main {
   .register-page h2 {
     font-size: 26px;
   }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .signup-section {
+    max-width: 100%;
+  }
+}
+
+
+.event-card {
+  height: 100%;
+}
+
+.event-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.event-description {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  min-height: 82px;
+}
+
+.event-info {
+  margin: 18px 0;
+}
+
+.event-info p {
+  margin: 8px 0;
+}
+
+.event-card a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-card a:hover {
+  text-decoration: underline;
 }
