@@ -5,7 +5,7 @@ type SkillBadgeProps = {
 };
 
 function SkillBadge({ skill }: SkillBadgeProps) {
-  return <Tag>{skill}</Tag>;
+  return <Tag label={skill} />;
 }
 
 export default SkillBadge;

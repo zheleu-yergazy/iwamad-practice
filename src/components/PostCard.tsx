@@ -29,7 +29,7 @@ function PostCard({ title, date, tags, image }: PostCardProps) {
 
       <div className="post-tags">
         {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
+          <Tag key={tag} label={tag} />
         ))}
       </div>
 

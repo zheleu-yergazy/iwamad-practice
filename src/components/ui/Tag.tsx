@@ -1,11 +1,9 @@
-﻿import type { ReactNode } from "react";
-
-type TagProps = {
-  children: ReactNode;
+﻿type TagProps = {
+  label: string;
 };
 
-function Tag({ children }: TagProps) {
-  return <span className="ui-tag">{children}</span>;
+function Tag({ label }: TagProps) {
+  return <span className="ui-tag">{label}</span>;
 }
 
 export default Tag;

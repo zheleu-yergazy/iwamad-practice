@@ -1,4 +1,5 @@
 ﻿@import "./styles/tokens.css";
+@import "./styles/ui.css";
 
 * {
   box-sizing: border-box;
@@ -29,6 +30,7 @@ main {
   width: 100%;
 }
 
+/* Header — mobile first */
 .site-header {
   display: flex;
   flex-direction: column;
@@ -89,15 +91,7 @@ main {
   font-size: 14px;
 }
 
-.ui-card {
-  min-width: 0;
-  padding: var(--spacing-medium);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
+/* Home page */
 .blog-home {
   width: 100%;
   max-width: 1100px;
@@ -164,45 +158,6 @@ main {
   margin: 0;
 }
 
-.ui-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-button);
-  background: var(--color-surface);
-  color: var(--color-text);
-  font-size: 12px;
-  line-height: 1.4;
-}
-
-.ui-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-small);
-  min-height: 44px;
-  padding: 10px 16px;
-  border: 1px solid var(--color-primary);
-  border-radius: var(--radius-button);
-  background: var(--color-primary);
-  color: var(--color-surface);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.ui-button:hover {
-  opacity: 0.88;
-}
-
-.ui-button--secondary {
-  background: var(--color-surface);
-  color: var(--color-primary);
-}
-
 .post-card .ui-button {
   align-self: center;
   min-height: 40px;
@@ -211,6 +166,7 @@ main {
   font-size: 13px;
 }
 
+/* Skills and Contact pages */
 .page-container {
   width: 100%;
   max-width: 1100px;
@@ -320,6 +276,7 @@ main {
   }
 }
 
+/* Desktop grids */
 @media (min-width: 901px) {
   .posts-grid,
   .skills-grid {
@@ -331,6 +288,7 @@ main {
   }
 }
 
+/* Small screens */
 @media (max-width: 600px) {
   .blog-home,
   .page-container {
