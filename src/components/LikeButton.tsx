@@ -5,7 +5,11 @@ function LikeButton() {
   const { likes, addLike } = useLikes();
 
   return (
-    <Button onClick={addLike} type="button">
+    <Button
+      onClick={addLike}
+      type="button"
+      aria-label="Like this profile"
+    >
       {likes > 0 ? "♥ Liked" : "♡ Like"}
     </Button>
   );
