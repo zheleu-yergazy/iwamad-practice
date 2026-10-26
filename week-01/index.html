@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ergazy Zheleu - Personal Profile</title>
+
+    <meta name="description" content="I am Ergazy Zheleu. I am a student interested in web development and programming.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-gray-800 text-white text-center p-6">
+        <h1 class="text-3xl font-bold">Ergazy Zheleu</h1>
+        <p class="mt-2">Web Development Learner</p>
+    </header>
+
+    <nav class="flex justify-center gap-6 p-4 bg-white">
+        <a class="text-blue-600 hover:underline" href="#about">About</a>
+        <a class="text-blue-600 hover:underline" href="#skills">Skills</a>
+        <a class="text-blue-600 hover:underline" href="#goals">Goals</a>
+        <a class="text-blue-600 hover:underline" href="#contact">Contact</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto p-4">
+
+        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+
+            <p class="mb-4">
+                Hello! My name is Ergazy Zheleu. I am a student interested
+                in web development and programming. I hope this course will
+                help me learn HTML and improve my programming skills.
+            </p>
+
+            <div class="flex flex-col items-center gap-4">
+                <img
+                    src="photo.jpg"
+                    alt="Profile photo of Ergazy Zheleu"
+                    width="200"
+                    class="rounded-full"
+                >
+
+                <button
+                    id="likeButton"
+                    class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                    ♡ Like
+                </button>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4">My Skills</h2>
+
+            <ul class="list-disc ml-6">
+                <li>Basic computer skills</li>
+                <li>Programming basics</li>
+                <li>Problem solving</li>
+                <li>Git and GitHub basics</li>
+            </ul>
+        </section>
+
+        <section id="goals" class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4">My Goals</h2>
+
+            <p>
+                My goal is to improve my HTML, CSS and JavaScript skills
+                and become a better web developer.
+            </p>
+        </section>
+
+        <section id="contact" class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+
+            <p class="mb-4">
+                You can contact me by email:
+                <a
+                    href="mailto:y_zheleu@kbtu.kz"
+                    class="text-blue-600 hover:underline"
+                >
+                    y_zheleu@kbtu.kz
+                </a>
+            </p>
+
+            <form>
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="border p-2 rounded ml-2"
+                >
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="border p-2 rounded ml-2"
+                >
+
+                <br><br>
+
+                <label for="message">Message:</label>
+                <br>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    class="border p-2 rounded mt-2"
+                ></textarea>
+
+                <br><br>
+
+                <button
+                    type="submit"
+                    class="bg-gray-800 text-white px-4 py-2 rounded"
+                >
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-6">
+        <p>&copy; 2026 Ergazy Zheleu</p>
+    </footer>
+
+    <script>
+        const likeButton = document.querySelector("#likeButton");
+
+        likeButton.addEventListener("click", function () {
+            if (likeButton.textContent === "♡ Like") {
+                likeButton.textContent = "♥ Liked";
+            } else {
+                likeButton.textContent = "♡ Like";
+            }
+        });
+    </script>
+
+</body>
+</html>
